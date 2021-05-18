@@ -1,0 +1,22 @@
+.fw-theme-l5 {color:black!important; background-color:#fef3f3 !important}
+.fw-theme-l4 {color:black !important; background-color:#fdd6d6 !important}
+.fw-theme-l3 {color:black !important; background-color:#fbaeae !important}
+.fw-theme-l2 {color:black !important; background-color:#f98585 !important}
+.fw-theme-l1 {color:white !important; background-color:#f65c5c !important}
+.fw-theme-d1 {color:white !important; background-color:#f31717 !important}
+.fw-theme-d2 {color:white !important; background-color:#e10c0c !important}
+.fw-theme-d3 {color:white !important; background-color:#c50a0a !important}
+.fw-theme-d4 {color:white !important; background-color:#a90909 !important}
+.fw-theme-d5 {color:white !important; background-color:#8d0707 !important}
+
+.fw-theme-light {color:black !important; background-color:#fef3f3 !important}
+.fw-theme-dark {color:white !important; background-color:#8d0707 !important}
+.fw-theme-action {color:white !important; background-color:#8d0707 !important}
+
+.fw-theme {color:white !important; background-color:#f43636 !important}
+.fw-text-theme {color:#f43636 !important}
+.fw-border-theme {border-color:#f43636 !important}
+
+.fw-hover-theme:hover {color:white!important; background-color:#f43636 !important}
+.fw-hover-text-theme:hover {color:#f43636 !important}
+.fw-hover-border-theme:hover {border-color:#f43636 !important}

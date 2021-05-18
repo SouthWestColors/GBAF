@@ -1,0 +1,392 @@
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body {
+    margin: 0
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+    display: block
+}
+
+a {
+    background-color: transparent
+}
+a:active,
+a:hover {
+    outline-width: 0
+}
+b,
+strong {
+    font-weight: bolder
+}
+
+img {
+    border-style: none
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+button,
+input,
+select,
+textarea,
+optgroup {
+    font: inherit;
+    margin: 0
+}
+button,
+input {
+    overflow: visible
+}
+button,
+select {
+    text-transform: none
+}
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button
+}
+
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+html {
+    overflow-x: hidden
+}
+h1 {
+    font-size: 36px
+}
+h2 {
+    font-size: 30px
+}
+h3 {
+    font-size: 24px
+}
+h4 {
+    font-size: 20px
+}
+h5 {
+    font-size: 18px
+}
+h6 {
+    font-size: 16px
+}
+.w3-serif {
+    font-family: serif
+        
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0
+}
+.fw-image {
+    max-width: 100%;
+    height: auto
+}
+
+
+.fw-btn,
+.fw-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+.fw-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.fw-btn,
+.fw-button {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+
+
+.fw-bar {
+    width: 100%;
+    overflow: hidden
+}
+.fw-bar .fw-bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0
+}
+
+.fw-bar .fw-button {
+    white-space: normal
+}
+/*Partie responsive*/
+.fw-container:after,
+.fw-container:before,
+.fw-panel:after,
+.fw-panel:before,
+.fw-row:after,
+.fw-row:before,
+.fw-row-padding:after,
+.fw-row-padding:before,
+.fw-cell-row:before,
+.fw-cell-row:after,
+.fw-clear:after,
+.fw-clear:before,
+.fw-bar:before,
+.fw-bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+.fw-coll,
+.fw-half,
+.fw-third,
+.fw-twothird,
+.fw-threequarter,
+.fw-quarter {
+    float: left;
+    width: 100%
+}
+.fw-coll.m3,
+.fw-quarter {
+width: 24.99999%
+}
+.fw-coll.m9,
+.fw-threequarter {
+width: 74.99999%
+}
+.fw-rest {
+    overflow: hidden
+}
+.fw-stretch {
+    margin-left: -16px;
+    margin-right: -16px
+}
+.fw-content,
+.fw-auto {
+    margin-left: auto;
+    margin-right: auto
+}
+.fw-content {
+    max-width: 980px
+}
+
+.fw-hide {
+    display: none!important
+}
+
+@media (max-width:992px) and (min-width:601px) {
+    .fw-hide-medium {
+        display: none!important
+    }
+}
+
+
+/*             Partie "Responsive@media" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Alignement" Start */
+
+.fw-top,
+.fw-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+.fw-top {
+    top: 0
+}
+
+/*             Partie "Alignement" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Custom Formes" Start */
+
+.fw-circle {
+    border-radius: 50%
+}
+.fw-round,
+.fw-round-medium {
+    border-radius: 4px
+}
+.fw-round-large {
+    border-radius: 8px
+}
+
+/*             Partie "Custom Formes" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Custom Créations" Start */
+
+.fw-row-padding,
+.fw-row-padding>.fw-half,
+.fw-row-padding>.fw-third,
+.fw-row-padding>.fw-twothird,
+.fw-row-padding>.fw-threequarter,
+.fw-row-padding>.fw-quarter,
+.fw-row-padding>.fw-coll {
+    padding: 0 8px
+}
+.fw-container,
+.fw-panel {
+    padding: 0.01em 16px
+}
+.fw-card,
+.fw-card-2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+
+/*             Partie "Custom Créations" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Taille txt" Start */
+
+
+
+.fw-large {
+    font-size: 18px!important
+}
+
+
+/*             Partie "Taille txt" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "txt Align" Start */
+
+.fw-left-align {
+    text-align: left!important
+}
+
+.fw-center {
+    text-align: center!important
+}
+
+/*             Partie "txt Align" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Borders" Start */
+
+
+.fw-border {
+    border: 1px solid #ccc!important
+}
+
+
+/*             Partie "Borders" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "margins/paddings" Start */
+
+.fw-section,
+.fw-code {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important
+}
+.fw-margin {
+    margin: 16px!important
+}
+.fw-margin-top {
+    margin-top: 16px!important
+}
+.fw-margin-bottom {
+    margin-bottom: 16px!important
+}
+.fw-margin-left {
+    margin-left: 16px!important
+}
+.fw-margin-right {
+    margin-right: 16px!important
+}
+.fw-padding-small {
+    padding: 4px 8px!important
+}
+.fw-padding {
+    padding: 8px 16px!important
+}
+.fw-padding-large {
+    padding: 12px 24px!important
+}
+
+
+/*             Partie "margins/paddings" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "floats" Start */
+
+.fw-left {
+    float: left!important
+}
+.fw-right {
+    float: right!important
+}
+
+/*             Partie "floats" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Hover" Start */
+
+.fw-button:hover {
+    color: #000!important;
+    background-color: #ccc!important
+}
+
+.fw-white,
+.fw-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important
+}
+
+.fw-text-red,
+.fw-hover-text-red:hover {
+    color: #f44336!important
+}
+
+.fw-border-red,
+.fw-hover-border-red:hover {
+    border-color: #f44336!important
+}
