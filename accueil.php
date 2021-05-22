@@ -18,7 +18,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 </style>
 <body class="fw-theme-red">
 
-<?php include('barNav.php'); ?>
+<?php include('barNav.php'); include('fonctions.php'); ?>
 
 <!-- Page Container -->
 <div class="fw-container fw-content" style="max-width:1400px;margin-top:80px">    
@@ -29,7 +29,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Profil -->
       <div class="fw-card fw-round fw-white">
         <div class="fw-container">
-         <h4 class="fw-center"><?= $_SESSION['nom'] ?></h4>
+         <h4 class="fw-center"><?= getNomFamille($_SESSION['username']); ?></h4>
          <p class="fw-center"><img src="img/Profil.png" class="fw-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
         </div>

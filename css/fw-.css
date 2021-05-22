@@ -208,6 +208,9 @@ width: 24.99999%
 .fw-threequarter {
 width: 74.99999%
 }
+.fw-coll.m12 {
+        width: 99.99999%
+    }
 .fw-rest {
     overflow: hidden
 }
@@ -380,6 +383,11 @@ width: 74.99999%
     color: #000!important;
     background-color: #fff!important
 }
+.fw-red,
+.fw-hover-red:hover {
+    color: #fff!important;
+    background-color: #f44336!important
+}
 
 .fw-text-red,
 .fw-hover-text-red:hover {
@@ -389,4 +397,8 @@ width: 74.99999%
 .fw-border-red,
 .fw-hover-border-red:hover {
     border-color: #f44336!important
+}
+.fw-border-pale-red,
+.fw-hover-border-pale-red:hover {
+    border-color: #ffe7e7!important
 }

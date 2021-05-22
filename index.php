@@ -40,7 +40,7 @@
             margin-left: 120px
         }
         
-        .boutton {
+        .button {
             width: 300px;
         }
         /* Supprimer la marge de "Page Content" sur les petits écrans */
@@ -63,7 +63,9 @@
             <div class="fw-coll" style="width:60%">
                <div class="fw-center">
                    <header class="fw-container fw-red fw-center">
-                    <h1>Login</h1> 
+                
+                    <div class="fw-center">
+         <img src="img/Logo GBAF.png" alt="GBAF">
                     </header>
                     
                     <div class="fw-row-padding">
@@ -71,20 +73,20 @@
                           <div class="fw-card fw-round fw-white">
                             <div class="fw-container fw-padding">
                             
-                            <a href="form-register.php">S'enregistrer</a>
+                            <a href="form-register.php">Créer un compte</a>
                              
                               
                               
-                              <form  method="POST" action="action-connect.php" class="fw-container fw-card-4" style="margin-top: 20%;">
+                              <form  method="POST" action="action-connect.php" class="fw-container fw-card-4" style="margin-top: 0%;">
                               <div>
                                   <p>
-                                  <label>Pseudo</label>
-                                <input class="fw-input" name="username" type="text" style="width:90%" required>
+                                  <label>Pseudonyme</label>
+                                <input class="fw-input" name="username" type="text" style="width:80%" required>
                                 
                             </p>
                             <p>
-                               <label>Password</label>
-                                <input class="fw-input" name="password" type="password" style="width:90%" required>
+                               <label>Mot de passe</label>
+                                <input class="fw-input" name="password" type="password" style="width:80%" required>
                                 
                                
                             </p>
@@ -93,7 +95,7 @@
                               
                               <div class="fw-center">
                                  <p>
-                                <button type="submit" name="submit" class="fw-button fw-section fw-red fw-ripple" style="color: black"> Log in </button>
+                                <button type="submit" name="submit" class="fw-button fw-white fw-border fw-border-red fw-round-large" style="color: black"> Se connecter </button>
                             </p>
                             </div>
                             
@@ -119,6 +121,7 @@
                 <p></p>
             </div>
     </section>
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

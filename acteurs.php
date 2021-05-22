@@ -57,7 +57,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 </style>
 <body class="fw-theme-red">
 
-<?php include('barNav.php'); ?>
+<?php include('barNav.php'); include('fonctions.php');?>
 
 <!-- Page Container -->
 <div class="fw-container fw-content" style="max-width:1400px;margin-top:80px">    
@@ -70,7 +70,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Profile -->
       <div class="fw-card fw-round fw-white">
         <div class="fw-container">
-         <h4 class="fw-center"><?= $_SESSION['username'] ?></h4>
+         <h4 class="fw-center"><?= getNomFamille($_SESSION['username']); ?></h4>
          <p class="fw-center"><img src="img/Profil.png" alt="Avatar" class="fw-circle fw-center" style="width:60px"></p>
          <hr>
         </div>
@@ -143,7 +143,25 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <div class="fw-container fw-card fw-white fw-round fw-margin-left fw-margin-right"><br>
 
        <br>
+      <h2>Commentaires</h2>
 
+      <?php
+      $query->closeCursor(); // Important : on libère le curseur pour la prochaine requête
+
+      $sql = "SELECT id_user, post, date_add FROM post WHERE id_acteur = :id ORDER BY date_add";
+      $query = $db -> prepare($sql);
+      $query->bindValue(":id", $_GET['id']);
+      $query->execute();
+
+      while ($donnees = $query->fetch())
+      {
+      ?>
+      <p><strong><?php echo htmlspecialchars($donnees['id_user']); ?></strong> le <?php echo $donnees['date_add']; ?></p>
+      <p><?php echo nl2br(htmlspecialchars($donnees['post'])); ?></p>
+      <?php
+      } // Fin de la boucle des commentaires
+      $query->closeCursor();
+      ?>
         
           <div class="fw-row-padding" style="margin:0 -16px">
         </div>

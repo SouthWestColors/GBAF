@@ -78,7 +78,7 @@
                              
                               
                               
-                              <form  name="form" method="POST" action="action-signing.php" class="fw-container fw-card-4" style="margin-top: 20%;">
+                              <form  name="form" method="POST" action="action-signup.php" class="fw-container fw-card-4" style="margin-top: 20%;">
                               <div>
                                   <p>
                                   <label for="nom">Nom <span>*</span></label>

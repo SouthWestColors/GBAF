@@ -8,12 +8,12 @@
    
     <?php echo $_SESSION['username']; ?>
   </a>
-  <a class="fw-hide-small fw-right" href="logout.php">Déconnexion</a>
+  <a  class="fw-bar-item fw-button fw-padding-large fw-theme-d4 fw-right" href="logout.php">Se déconnecter</a>
  </div>
 </div>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="fw-bar-block fw-theme-d2 fw-hide fw-hide-large fw-hide-medium fw-large">
   <a href="profil.php" class="fw-bar-item fw-button fw-padding-large">Profil</a>
-  <a href="logout.php" >Déconnexion</a>
+  <a href="logout.php" >Se déconnecter</a>
 </div>
