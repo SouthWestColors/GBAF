@@ -143,6 +143,37 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <div class="fw-container fw-card fw-white fw-round fw-margin-left fw-margin-right"><br>
 
        <br>
+
+
+
+       <h2>Likes</h2>
+
+      <?php
+      $query->closeCursor(); // Important : on libère le curseur pour la prochaine requête
+
+      $sql = "SELECT count(*) FROM vote where vote = 'like'";
+      $query = $db -> prepare($sql);
+      $query->bindValue(":id", $_GET['id']);
+      $query->execute();
+
+      $nblikes = $query->fetch();
+
+      $sql = "SELECT count(*) FROM vote where vote = 'dislike'";
+      $query = $db -> prepare($sql);
+      $query->bindValue(":id", $_GET['id']);
+      $query->execute();
+
+      $nbdislikes = $query->fetch();
+      ?>
+      <p><strong><?php print_r($nblikes[0]); ?></strong> likes, <strong><?php print_r($nbdislikes[0]); ?></strong> dislikes</p>
+      <?php
+      $query->closeCursor();
+      ?>
+
+
+
+
+
       <h2>Commentaires</h2>
 
       <?php
