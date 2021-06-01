@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Cours PHP / MySQL</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1>Bases de données MySQL</h1>  
+
         <?php
             $servername = 'localhost';
             $username = 'root';
@@ -19,8 +12,7 @@
                 echo 'Connexion réussie';
             }
             
-            /*On capture les exceptions si une exception est lancée et on affiche
-             *les informations relatives à celle-ci*/
+            //gestion des erreurs éventuelles
             catch(PDOException $e){
               echo "Erreur : " . $e->getMessage();
             }
@@ -28,20 +20,23 @@
 
             $sql = "SELECT id_user FROM account WHERE username = :username AND password = :password";
 
-            //repasser le GET en POST
+            // on prépare la requete sql sur la base de donnée où l'on s'est connectés juste au dessus
             $query = $db->prepare($sql);
+            // on associe la valeur username de la requete sql au contenu du champ username transmis par le formulaire (donc rempli par l'utilisateur)
             $query->bindValue(":username", $_POST['username']);
             $query->bindValue(":password", $_POST['password']);
+            // on exécute la requete
             $query->execute();
 
-
+            // on récupère le resultat de la requete
             $user = $query->fetch();
 
+            // si on a bien une correspondance dans la bd
             if ($user) {
         
             // on la démarre :)
             session_start ();
-            // on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
+            // on enregistre les paramètres de notre visiteur comme variables de session
             
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['password'] = $_POST['password'];
@@ -52,5 +47,3 @@
             echo "Erreur";
         }
         ?>
-    </body>
-</html>

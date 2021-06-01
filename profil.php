@@ -30,15 +30,43 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="fw-container">
          <h4 class="fw-center"><?= getNomFamille($_SESSION['username']); ?></h4>
          <p class="fw-center"><img src="img/Profil.png" class="fw-circle" style="height:106px;width:106px" alt="Avatar"></p>
-         <hr>
-         <p><i class="fa fa-pencil fa-fw fw-margin-right fw-text-theme"></i> Poste, Spécialité</p>
-         <p><i class="fa fa-home fa-fw fw-margin-right fw-text-theme"></i> Ville, Pays</p>
-         <p><i class="fa fa-birthday-cake fa-fw fw-margin-right fw-text-theme"></i> Date d'inscription</p>
         </div>
       </div>
 
     <!-- End Left Column -->
     </div>
+
+    <?php
+      //on va rechercher les infos de l'utilisateur à afficher
+      $servername = 'localhost';
+      $username = 'root';
+      $password = 'root';
+      
+      //On essaie de se connecter
+      try{
+          $db = new PDO("mysql:host=$servername;dbname=gbaf", $username, $password);
+          //On définit le mode d'erreur de PDO sur Exception
+          $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          //echo 'Connexion réussie';
+      }
+      
+      /*On capture les exceptions si une exception est lancée et on affiche
+       *les informations relatives à celle-ci*/
+      catch(PDOException $e){
+        echo "Erreur : " . $e->getMessage();
+      }
+
+      $sql = "SELECT * FROM account WHERE username = :username";
+      $query = $db->prepare($sql);
+      $query->bindValue(":username", $_SESSION['username']);
+      $query->execute();
+
+      $userinfo = $query->fetch(PDO::PARAM_STR);
+      //print_r($userinfo);
+
+      $query->closeCursor();
+
+    ?>
     
     <!-- Middle Column -->
     <div class="fw-coll m9">  
@@ -46,9 +74,42 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <img src="img/Profil.png" alt="Avatar" class="fw-left fw-circle fw-margin-right" style="width:60px">
         <h4><?php echo $_SESSION['username']; ?></h4><br>
         <hr class="fw-clear">
-        <p>Description profil blabla</p>
-          <div class="fw-row-padding" style="margin:0 -16px">
-        </div>
+        <form  name="form" method="POST" action="updateprofil.php" class="fw-container fw-card-4">
+          <div>
+            <p>
+              <label for="nom">Nom <span>*</span></label>
+              <input class="input fw-input" name="nom" type="text" style="width:90%" placeholder= <?php echo('"'.$userinfo['nom'].'"'); ?> >
+            </p>
+            <p>
+              <label for="prenom">Prénom <span>*</span></label>
+              <input class="input fw-input" name="prenom" type="text" style="width:90%" placeholder= <?php echo('"'.$userinfo['prenom'].'"'); ?> >
+            </p>
+            <p>
+              <label for="username">Pseudo <span>*</span></label>
+              <input class="input fw-input" name="username" type="text" style="width:90%" placeholder= <?php echo('"'.$userinfo['username'].'"'); ?> >
+            </p>
+
+            <p>
+              <label for="password">Password <span>*</span></label>
+              <input class="input fw-input" name="password" type="password" style="width:90%" placeholder= <?php echo('"'.$userinfo['password'].'"'); ?> >
+            </p>
+
+            <p>
+              <label for="question">Question de sécurité <span>*</span></label>
+              <input class="fw-input" name="question" type="text" style="width:90%" placeholder= <?php echo('"'.$userinfo['question'].'"'); ?> >
+            </p>
+            <p>
+              <label for="reponse">Réponse <span>*</span></label>
+              <input class="fw-input" name="reponse" type="text" style="width:90%" placeholder= <?php echo('"'.$userinfo['reponse'].'"'); ?> >
+            </p>
+          </div>
+
+          <div class="fw-center">
+            <p>
+              <button type="submit" name="submit" class="fw-button fw-section fw-red fw-ripple"> Enregistrer les modifications </button>
+            </p>
+          </div>
+        </form>
 
         <button type="button" class="fw-button fw-theme-d2 fw-margin-bottom fw-right">Paramètres du compte</button> 
       </div>

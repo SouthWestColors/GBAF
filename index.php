@@ -61,65 +61,55 @@
                 <p></p>
             </div>
             <div class="fw-coll" style="width:60%">
-               <div class="fw-center">
-                   <header class="fw-container fw-red fw-center">
-                
-                    <div class="fw-center">
-         <img src="img/Logo GBAF.png" alt="GBAF">
+                <div class="fw-center">
+                    <header class="fw-container fw-red fw-center">
+                        <img src="img/Logo GBAF.png" alt="GBAF">
                     </header>
-                    
+
                     <div class="fw-row-padding">
                         <div class="fw-coll m12">
-                          <div class="fw-card fw-round fw-white">
-                            <div class="fw-container fw-padding">
-                            
-                            <a href="form-register.php">Créer un compte</a>
-                             
+                            <div class="fw-card fw-round fw-white">
+                                <div class="fw-container fw-padding">
+                                    <a href="form-register.php">Créer un compte</a>
+                                     
+                                    <form  method="POST" action="action-connect.php" class="fw-container fw-card-4" style="margin-top: 0%;">
+                                        <div>
+                                            <p>
+                                                <label>Pseudonyme</label>
+                                                <input class="fw-input" name="username" type="text" style="width:80%" required>
+                                            </p>
+                                            <p>
+                                                <label>Mot de passe</label>
+                                                <input class="fw-input" name="password" type="password" style="width:80%" required>
+                                            </p>
+                                            <br>
+                                        </div>
+
+                                        <div class="fw-center">
+                                            <p>
+                                                <button type="submit" name="submit" class="fw-button fw-white fw-border fw-border-red fw-round-large" style="color: black"> Se connecter </button>
+                                            </p>
+                                            <a href="forgotpassword.php">Mot de passe oublié ?</a>
+                                        </div>
+                                    </form>
                               
-                              
-                              <form  method="POST" action="action-connect.php" class="fw-container fw-card-4" style="margin-top: 0%;">
-                              <div>
-                                  <p>
-                                  <label>Pseudonyme</label>
-                                <input class="fw-input" name="username" type="text" style="width:80%" required>
-                                
-                            </p>
-                            <p>
-                               <label>Mot de passe</label>
-                                <input class="fw-input" name="password" type="password" style="width:80%" required>
-                                
-                               
-                            </p>
-                            <br>
-                              </div>
-                              
-                              <div class="fw-center">
-                                 <p>
-                                <button type="submit" name="submit" class="fw-button fw-white fw-border fw-border-red fw-round-large" style="color: black"> Se connecter </button>
-                            </p>
+                                </div>
                             </div>
-                            
-                            
-                           
-                        </form>
-                              
-                            </div>
-                          </div>
                         </div>
                    </div>
-                  </div>
+                </div>
                     
                 <div>
                     <div class="fw-container fw-half fw-margin-top">
                         
                     </div>
                 </div>
-               </div>
+            </div>
                 
-            </div>
-            <div class="fw-coll" style="width:20%">
-                <p></p>
-            </div>
+        </div>
+        <div class="fw-coll" style="width:20%">
+            <p></p>
+        </div>
     </section>
     <?php include('footer.php'); ?>
 </body>

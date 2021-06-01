@@ -146,19 +146,49 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 
 
+
+
+
+
+<form  method="POST" action= <?php echo('liking.php?id='.$_GET['id']); ?> class="fw-container fw-card-4" style="margin-top: 0%;">
+<div class="fw-center">
+  <p>
+    <button type="submit" name="like" class="fw-button fw-white fw-border fw-border-red fw-round-large" style="color: black"> Like </button>
+  </p>
+</div>
+</form>
+
+<form  method="POST" action= <?php echo('disliking.php?id='.$_GET['id']); ?> class="fw-container fw-card-4" style="margin-top: 0%;">
+
+<div class="fw-center">
+  <p>
+    <button type="submit" name="dislike" class="fw-button fw-white fw-border fw-border-red fw-round-large" style="color: black"> Dislike </button>
+  </p>
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+
        <h2>Likes</h2>
 
       <?php
       $query->closeCursor(); // Important : on libère le curseur pour la prochaine requête
 
-      $sql = "SELECT count(*) FROM vote where vote = 'like'";
+      $sql = "SELECT count(*) FROM vote where id_acteur = :id AND vote = 'like'";
       $query = $db -> prepare($sql);
       $query->bindValue(":id", $_GET['id']);
       $query->execute();
 
       $nblikes = $query->fetch();
 
-      $sql = "SELECT count(*) FROM vote where vote = 'dislike'";
+      $sql = "SELECT count(*) FROM vote where id_acteur = :id AND vote = 'dislike'";
       $query = $db -> prepare($sql);
       $query->bindValue(":id", $_GET['id']);
       $query->execute();
@@ -195,6 +225,23 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       ?>
         
           <div class="fw-row-padding" style="margin:0 -16px">
+
+          <form  name="form" method="POST" action= <?php echo('addcomment.php?id='.$_GET['id']); ?> class="fw-container fw-card-4">
+          <div>
+            <p>
+              <label for="nom">Ajouter un commentaire : </label>
+              <br>
+              <input class="input fw-input" name="post" type="textarea" style="width:90%" >
+            </p>
+          </div>
+
+          <div class="fw-center">
+            <p>
+              <button type="submit" name="submit" class="fw-button fw-section fw-red fw-ripple"> Ajouter </button>
+            </p>
+          </div>
+        </form>
+
         </div>
       </div>
       

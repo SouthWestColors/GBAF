@@ -173,6 +173,7 @@ hr {
     white-space: normal
 }
 /*Partie responsive*/
+
 .fw-container:after,
 .fw-container:before,
 .fw-panel:after,
@@ -234,6 +235,11 @@ width: 74.99999%
 @media (max-width:992px) and (min-width:601px) {
     .fw-hide-medium {
         display: none!important
+    }
+}
+@media (min-width:993px) {
+    .fw-coll.l1 {
+        width: 8.33333%
     }
 }
 
