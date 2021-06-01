@@ -73,6 +73,9 @@ button,
     -webkit-appearance: button
 }
 
+/* ------------------------------------------------------------------*/
+/*             Partie "Texte et taille" Start */
+
 html,
 body {
     font-family: Verdana, sans-serif;
@@ -115,6 +118,12 @@ h6 {
     font-weight: 400;
     margin: 10px 0
 }
+.fw-large {
+    font-size: 18px!important
+}
+/*             Partie "Texte et taille" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Apparence générale" Start */
 
 hr {
     border: 0;
@@ -153,9 +162,6 @@ hr {
     user-select: none
 }
 
-
-
-
 .fw-bar {
     width: 100%;
     overflow: hidden
@@ -172,35 +178,8 @@ hr {
 .fw-bar .fw-button {
     white-space: normal
 }
-/*Partie responsive*/
 
-.fw-container:after,
-.fw-container:before,
-.fw-panel:after,
-.fw-panel:before,
-.fw-row:after,
-.fw-row:before,
-.fw-row-padding:after,
-.fw-row-padding:before,
-.fw-cell-row:before,
-.fw-cell-row:after,
-.fw-clear:after,
-.fw-clear:before,
-.fw-bar:before,
-.fw-bar:after {
-    content: "";
-    display: table;
-    clear: both
-}
-.fw-coll,
-.fw-half,
-.fw-third,
-.fw-twothird,
-.fw-threequarter,
-.fw-quarter {
-    float: left;
-    width: 100%
-}
+
 .fw-coll.m3,
 .fw-quarter {
 width: 24.99999%
@@ -232,17 +211,172 @@ width: 74.99999%
     display: none!important
 }
 
+
+/*             Partie "Apparence générale" End */
+/* ------------------------------------------------------------------*/
+/*             Partie "Responsive@media" Start */
+
+
+.fw-responsive {
+    display: block;
+    overflow-x: auto
+}
+.fw-container:after,
+.fw-container:before,
+.fw-panel:after,
+.fw-panel:before,
+.fw-row:after,
+.fw-row:before,
+.fw-row-padding:after,
+.fw-row-padding:before,
+.fw-cell-row:before,
+.fw-cell-row:after,
+.fw-clear:after,
+.fw-clear:before,
+.fw-bar:before,
+.fw-bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+.fw-coll,
+.fw-half,
+.fw-third,
+.fw-twothird,
+.fw-threequarter,
+.fw-quarter {
+    float: left;
+    width: 100%
+}
+img {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width:992px) and (min-width:601px) {
     .fw-hide-medium {
         display: none!important
+    }
+}
+.fw-coll.s1 {
+    width: 8.33333%
+}
+.fw-coll.s2 {
+    width: 16.66666%
+}
+.fw-coll.s3 {
+    width: 24.99999%
+}
+.fw-coll.s4 {
+    width: 33.33333%
+}
+.fw-coll.s5 {
+    width: 41.66666%
+}
+.fw-coll.s6 {
+    width: 49.99999%
+}
+.fw-coll.s7 {
+    width: 58.33333%
+}
+.fw-coll.s8 {
+    width: 66.66666%
+}
+.fw-coll.s9 {
+    width: 74.99999%
+}
+.fw-coll.s10 {
+    width: 83.33333%
+}
+.fw-coll.s11 {
+    width: 91.66666%
+}
+.fw-coll.s12 {
+    width: 99.99999%
+}
+@media (min-width:601px) {
+    .fw-coll.m1 {
+        width: 8.33333%
+    }
+    .fw-coll.m2 {
+        width: 16.66666%
+    }
+    .fw-coll.m3,
+    .fw-quarter {
+        width: 24.99999%
+    }
+    .fw-coll.m4,
+    .fw-third {
+        width: 33.33333%
+    }
+    .fw-coll.m5 {
+        width: 41.66666%
+    }
+    .fw-coll.m6,
+    .fw-half {
+        width: 49.99999%
+    }
+    .fw-coll.m7 {
+        width: 58.33333%
+    }
+    .fw-coll.m8,
+    .fw-twothird {
+        width: 66.66666%
+    }
+    .fw-coll.m9,
+    .fw-threequarter {
+        width: 74.99999%
+    }
+    .fw-coll.m10 {
+        width: 83.33333%
+    }
+    .fw-coll.m11 {
+        width: 91.66666%
+    }
+    .fw-coll.m12 {
+        width: 99.99999%
     }
 }
 @media (min-width:993px) {
     .fw-coll.l1 {
         width: 8.33333%
     }
+    .fw-coll.l2 {
+        width: 16.66666%
+    }
+    .fw-coll.l3 {
+        width: 24.99999%
+    }
+    .fw-coll.l4 {
+        width: 33.33333%
+    }
+    .fw-coll.l5 {
+        width: 41.66666%
+    }
+    .fw-coll.l6 {
+        width: 49.99999%
+    }
+    .fw-coll.l7 {
+        width: 58.33333%
+    }
+    .fw-coll.l8 {
+        width: 66.66666%
+    }
+    .fw-coll.l9 {
+        width: 74.99999%
+    }
+    .fw-coll.l10 {
+        width: 83.33333%
+    }
+    .fw-coll.l11 {
+        width: 91.66666%
+    }
+    .fw-coll.l12 {
+        width: 99.99999%
+    }
 }
-
 
 /*             Partie "Responsive@media" End */
 /* ------------------------------------------------------------------*/
@@ -257,10 +391,17 @@ width: 74.99999%
 .fw-top {
     top: 0
 }
+.fw-left-align {
+    text-align: left!important
+}
+
+.fw-center {
+    text-align: center!important
+}
 
 /*             Partie "Alignement" End */
 /* ------------------------------------------------------------------*/
-/*             Partie "Custom Formes" Start */
+/*             Partie "Formes" Start */
 
 .fw-circle {
     border-radius: 50%
@@ -273,9 +414,9 @@ width: 74.99999%
     border-radius: 8px
 }
 
-/*             Partie "Custom Formes" End */
+/*             Partie "Formes" End */
 /* ------------------------------------------------------------------*/
-/*             Partie "Custom Créations" Start */
+/*             Partie "Boîtes CSS" Start */
 
 .fw-row-padding,
 .fw-row-padding>.fw-half,
@@ -296,30 +437,7 @@ width: 74.99999%
 }
 
 
-/*             Partie "Custom Créations" End */
-/* ------------------------------------------------------------------*/
-/*             Partie "Taille txt" Start */
-
-
-
-.fw-large {
-    font-size: 18px!important
-}
-
-
-/*             Partie "Taille txt" End */
-/* ------------------------------------------------------------------*/
-/*             Partie "txt Align" Start */
-
-.fw-left-align {
-    text-align: left!important
-}
-
-.fw-center {
-    text-align: center!important
-}
-
-/*             Partie "txt Align" End */
+/*             Partie "Boîtes CSS" End */
 /* ------------------------------------------------------------------*/
 /*             Partie "Borders" Start */
 
@@ -377,7 +495,7 @@ width: 74.99999%
 
 /*             Partie "floats" End */
 /* ------------------------------------------------------------------*/
-/*             Partie "Hover" Start */
+/*             Partie "Hover" et "Colors" Start */
 
 .fw-button:hover {
     color: #000!important;
@@ -403,8 +521,4 @@ width: 74.99999%
 .fw-border-red,
 .fw-hover-border-red:hover {
     border-color: #f44336!important
-}
-.fw-border-pale-red,
-.fw-hover-border-pale-red:hover {
-    border-color: #ffe7e7!important
 }

@@ -28,14 +28,13 @@
         .fw-row-padding img {
             margin-bottom: 12px
         }
-        /* Set the width of the sidebar to 120px */
+        
         
         .fw-sidebar {
             width: 120px;
             background: #222;
         }
-        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-        
+                
         #main {
             margin-left: 120px
         }
@@ -62,8 +61,10 @@
             </div>
             <div class="fw-coll" style="width:60%">
                 <div class="fw-center">
-                    <header class="fw-container fw-red fw-center">
-                        <img src="img/Logo GBAF.png" alt="GBAF">
+                    <header class="fw-container fw-center">
+                        <div style="text-align: center">
+                            <img src="img/Logo GBAF.png" alt="GBAF">
+                        </div>
                     </header>
 
                     <div class="fw-row-padding">
