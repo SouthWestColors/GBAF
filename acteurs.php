@@ -217,7 +217,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       while ($donnees = $query->fetch())
       {
       ?>
-      <p><strong><?php echo htmlspecialchars($donnees['id_user']); ?></strong> le <?php echo $donnees['date_add']; ?></p>
+      <p><strong><?php echo htmlspecialchars($donnees['id_user']); ?><?php echo $_donnees['username']; ?></strong> le <?php echo $donnees['date_add']; ?></p>
       <p><?php echo nl2br(htmlspecialchars($donnees['post'])); ?></p>
       <?php
       } // Fin de la boucle des commentaires
@@ -226,7 +226,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         
           <div class="fw-row-padding" style="margin:0 -16px">
 
-          <form  name="form" method="POST" action= <?php echo('addcomment.php?id='.$_GET['id']); ?> class="fw-container fw-card-4">
+          <form  name="form" method="POST" action= <?php echo('a.php?id='.$_GET['id']); ?> class="fw-container fw-card-4">
           <div>
             <p>
               <label for="nom">Ajouter un commentaire : </label>

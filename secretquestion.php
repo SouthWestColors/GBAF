@@ -116,7 +116,7 @@ session_start ();
 
                                 <div class="fw-center">
                                     <p>
-                                        <button type="submit" name="submit" class="fw-button fw-section fw-red fw-ripple"> OK </button>
+                                        <button type="submit" name="submit" class="fw-button fw-section fw-red fw-ripple"> Valider </button>
                                     </p>
                                 </div>
                             </form>

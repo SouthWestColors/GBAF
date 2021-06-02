@@ -2,13 +2,13 @@
 <div class="fw-top">
  <div class="fw-bar fw-theme-d2 fw-left-align fw-large">
   <a class="fw-bar-item fw-button fw-hide-medium fw-hide-large fw-right fw-padding-large fw-hover-white fw-large fw-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="accueil.php" class="fw-bar-item fw-button fw-padding-large fw-theme-d4"><i class="fa fa-home fw-margin-right"></i>Extranet - GBAF</a>
+  <a href="accueil.php" class="fw-bar-item fw-button fw-padding-large fw-theme-d4 fw-border fw-border-red fw-round-large"><i class="fa fa-home fw-margin-right"></i>Accueil GBAF</a>
     
-  <a href="profil.php" class="fw-bar-item fw-button fw-hide-small fw-right fw-padding-large fw-hover-white" title="Mon compte">
+  <a href="profil.php" class="fw-bar-item fw-button fw-hide-small fw-right fw-padding-large fw-hover-white fw-theme-d4 fw-border fw-border-red fw-round-large" title="Mon compte">
    
     <?php echo $_SESSION['username']; ?>
   </a>
-  <a  class="fw-bar-item fw-button fw-padding-large fw-theme-d4 fw-right" href="logout.php">Se déconnecter</a>
+  <a  class="fw-bar-item fw-button fw-padding-large fw-theme-d4 fw-right fw-border fw-border-red fw-round-large" href="logout.php">Se déconnecter</a>
  </div>
 </div>
 

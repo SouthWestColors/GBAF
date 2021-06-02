@@ -90,7 +90,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             </p>
 
             <p>
-              <label for="password">Password <span>*</span></label>
+              <label for="password">Mot de passe <span>*</span></label>
               <input class="input fw-input" name="password" type="password" style="width:90%" placeholder= <?php echo('"'.$userinfo['password'].'"'); ?> >
             </p>
 
@@ -106,13 +106,12 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
           <div class="fw-center">
             <p>
-              <button type="submit" name="submit" class="fw-button fw-section fw-red fw-ripple"> Enregistrer les modifications </button>
+              <button type="submit" name="submit" class="fw-button fw-section fw-white fw-border fw-border-red fw-round-large"> Enregistrer les modifications </button>
             </p>
           </div>
         </form>
 
-        <button type="button" class="fw-button fw-theme-d2 fw-margin-bottom fw-right">Paramètres du compte</button> 
-      </div>
+      
       
    
 
